@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.0)
+project(AP)
+set(CMAKE_CXX_STANDARD 11)
+include_directories(header)
+add_executable(admin src/main.cpp src/Plane.cpp src/Pilot.cpp src/PassengerPlane.cpp src/Flight.cpp src/CargoPlane.cpp src/Airport.cpp src/AdvancedPilot.cpp src/BegginerPilot.cpp src/Functions.cpp)
