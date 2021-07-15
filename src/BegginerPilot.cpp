@@ -1,6 +1,6 @@
 #include "BegginerPilot.hpp"
 #include "Functions.hpp"
-BegginerPilot::BegginerPilot(std::string name, std::string id, unsigned int age, unsigned int fn) : Pilot(id, name, age)
+BegginerPilot::BegginerPilot( std::string id, std::string name , unsigned int age, unsigned int fn) : Pilot(id, name, age)
 {
     this->id = id;
     setFlightsNumber(fn);

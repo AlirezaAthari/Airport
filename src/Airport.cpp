@@ -32,23 +32,20 @@ Airport::Airport(std::string name)
         in >> id;
         in.get(name , 29);
         in >> age;
-        size_t found = static_cast<std::string>(id).find("AP");
         if (!in.good())
         {
             break;
         }
-        if (found != std::string::npos)
+        if (static_cast<std::string>(id).find("AP") != std::string::npos)
         {
             char degree[16];
             in.get(degree , 16);
             pilots.push_back(new AdvancedPilot(id , static_cast<std::string>(name) , age , std::stoi(static_cast<std::string>(degree))));
         }
-        found = found = static_cast<std::string>(id).find("BP");
-        if (found != std::string::npos)
+        if (static_cast<std::string>(id).find("BP") != std::string::npos)
         {
             char flightsNumber[16];
             in.get(flightsNumber , 16);
-            std::cout << in.tellg();
             pilots.push_back(new BegginerPilot(id , static_cast<std::string>(name) , age , std::stoi(static_cast<std::string>(flightsNumber))));
         }
         if (!in.good())
